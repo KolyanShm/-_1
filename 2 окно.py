@@ -1,3 +1,20 @@
+# напиши здесь код для второго экрана приложения
+from PyQt5.QtCore import Qt
+from instr import *
+from PyQt5.QtWidgets import (
+        QApplication, QWidget, 
+        QHBoxLayout, QVBoxLayout,
+        QPushButton, QLabel,QLineEdit)
+
+from final_win import *
+class Test():
+  def __init__(self, age, starttest1, starttest2, starttest3 ):
+    self.age = age
+    self.starttest1 = int(starttest1)
+    self.starttest2 = int(starttest2)
+    self.starttest3 = int(starttest3)
+    
+
 class TestWin(QWidget):
 
     def next_click(self):
