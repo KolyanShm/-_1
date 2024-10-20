@@ -5,10 +5,15 @@ from PyQt5.QtWidgets import (
         QHBoxLayout, QVBoxLayout,
         QPushButton, QLabel,QLineEdit)
 from  instr import *
+from second_win import *
 
-class WinMain( QWidget) :
+class MainWin( QWidget) :
 
-    
+    def next_click(self):
+        self.tw = TestWin()
+        self.hide()
+        
+
 
     def set_appear(self):
         self.setWindowTitle(txt_title)
@@ -27,8 +32,10 @@ class WinMain( QWidget) :
         self.setLayout(self.layot)
 
         
+
     def connects(self):
-        pass
+        self.txt_next.clicked.connect(self.next_click)
+
     
     def __init__(self):
         super().__init__()
@@ -39,28 +46,12 @@ class WinMain( QWidget) :
 
 
 
+
+
+
 app = QApplication([])
-mw = WinMain()
+mw = MainWin()
 app.exec_()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
